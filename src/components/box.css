@@ -1,3 +1,10 @@
+.box {
+  border: 15px;
+  background-color: white;
+  padding: 50px;
+  margin: 20px;
+}
+
 .center {
   display: block;
   margin-left: auto;
