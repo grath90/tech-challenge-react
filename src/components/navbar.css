@@ -1,11 +1,13 @@
 .contact {
   color:  #DEBF79;
-  text-align: left;
+  text-align: right;
 }
 
 .navbar {
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }

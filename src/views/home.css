@@ -15,3 +15,21 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr))
 }
+
+.underline {
+  border-bottom: 4px solid #DEBF79;
+  display: inline-block;
+  line-height: 0.85;
+}
+
+h2, p {
+  color: white;
+}
+
+h2 {
+  font-size: 50px
+}
+
+a {
+  color: #DEBF79;
+}
