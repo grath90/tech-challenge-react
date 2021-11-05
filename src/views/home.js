@@ -1,24 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './home.css'
-import Box from '../components/box'
+
+import Container from './container'
 import NavBar from '../components/navbar'
+import Header from './header'
+import Contact from './contact'
 
 const Home = () => {
+  const [visible, setVisible] = useState(true)
   return (
     <div>
-      <NavBar />
-      <section className="container">
-        <Box image="Talkie.png" />
-        <Box image="Rabbit.png" />
-        <Box image="Shield.png" />
-      </section>
+      <NavBar setVisible={setVisible} visible={visible}/>
       <section>
-        <h2><span class="underline">Header</span> One</h2>
-        <p>
-          Remove the duplicates in 2 Javascript objects and output the
-          list of distinct names in an unordered list when <a>this link </a>
-          is clicked. If the Operation has been completed already notify the user this has already been done.
-        </p>
+        <Container visible={visible}/>
+        <Contact visible={!visible}/>
+        <Header />
       </section>
     </div>
   )
