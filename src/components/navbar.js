@@ -3,10 +3,12 @@ import './navbar.css'
 
 const NavBar = ({ setVisible, visible }) => {
   return (
-    <nav class="navbar">
-      <img src={`${process.env.PUBLIC_URL}/Logo.png`} alt=""/>
-      <p class="contact" onClick={() => setVisible(!visible)}>contact</p>
-    </nav>
+    <header class="header">
+      <nav class="navbar">
+        <img src={`${process.env.PUBLIC_URL}/Logo.png`} className="nav-image" alt=""/>
+        <p class="contact-button" onClick={() => setVisible(!visible)}>contact</p>
+      </nav>
+    </header>
   )
 }
 

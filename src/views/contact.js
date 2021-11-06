@@ -1,18 +1,18 @@
 import React from 'react'
+import './contact.css'
+import Header from './header'
+import Form from '../components/form'
 
-const Contact = ({ visible }) => {
+const Contact = ({ Text }) => {
   return (
-    <span>
-      {
-        visible
-        ?
-          <div>
-            <h3>Heading Two</h3>
-          </div>
-        :
-          <span />
-      }
-    </span>
+    <div className="contact">
+    <section className="contact-header-section">
+      <Header Text={Text}/>
+    </section>
+    <section className="contact-form-section">
+      <Form />
+    </section>
+  </div>
   )
 }
 

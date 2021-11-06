@@ -1,0 +1,71 @@
+.fname {
+  grid-area: fname;
+}
+
+.lname {
+  grid-area: lname;
+}
+
+.title {
+  grid-area: title;
+}
+
+.email {
+  grid-area: email;
+}
+
+.message {
+  grid-area: message;
+}
+
+.button {
+  grid-area: button;
+  justify-content: center;
+}
+
+input, textarea {
+  background-color: #F5F5F5;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  display: block;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+::placeholder {
+  color: #858585;
+  opacity: 1;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
+}
+
+.contact-header {
+  grid-area: contact-header;
+  color: black;
+  font-size: 30px;
+}
+
+.form {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
+  grid-template-rows: auto;
+  column-gap: 10px;
+  grid-template-areas:
+    "contact-header ."
+    "fname lname"
+    "title email"
+    "message message"
+    "button ."
+}

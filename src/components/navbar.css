@@ -1,20 +1,22 @@
-.contact {
+.contact-button {
   color:  #DEBF79;
   text-align: right;
   cursor: pointer;
 }
 
 .navbar {
-  margin-top: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
 }
 
-img {
-  max-width: 100%;
+.nav-image {
+  max-width: 50%;
   height: auto;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+}
+
+.header {
+  border-bottom: 1px;
 }
