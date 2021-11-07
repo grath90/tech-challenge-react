@@ -1,7 +1,7 @@
 import React from 'react'
 import './contact.css'
-import Header from './header'
-import Form from '../components/form'
+import Header from '../header/header'
+import Form from '../../components/form/form'
 
 const Contact = ({ Text }) => {
   return (

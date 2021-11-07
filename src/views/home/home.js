@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './home.css'
 
-import Container from './container'
-import NavBar from '../components/navbar'
-import Header from './header'
-import Contact from './contact'
+import Container from '../container/container'
+import NavBar from '../../components/navbar/navbar'
+import Header from '../header/header'
+import Contact from '../contact/contact'
 
 const MainText = () =>
 <p>
@@ -14,14 +14,18 @@ const MainText = () =>
 </p>
 
 const ContactText = () =>
-<p>
-  Lorem ipsum dolar sit amet, consectetur adipiscing elit,
-  sed do dos eiusmod tempor incididunt ut labore et
-  trace dolore magna aliqua.
+<>
+  <p>
+    Lorem ipsum dolar sit amet, consectetur adipiscing elit,
+    sed do dos eiusmod tempor incididunt ut labore et
+    trace dolore magna aliqua.
+  </p>
+  <p>
+    Proin sagittis nisl rhoncus mattis rhoncus. At augue eget
+    arcu distum varius duis at consectetur lorem.
+  </p>
+</>
 
-  Proin sagittis nisl rhoncus mattis rhoncus. At augue eget
-  arcu distum varius duis at consectetur lorem.
-</p>
 
 const Home = () => {
   const [visible, setVisible] = useState(true)
