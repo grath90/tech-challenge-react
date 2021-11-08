@@ -10,10 +10,6 @@
   grid-area: title;
 }
 
-.email {
-  grid-area: email;
-}
-
 .message {
   grid-area: message;
 }
@@ -48,22 +44,31 @@ textarea {
   opacity: 1;
 }
 
-.contact {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
-}
-
 .contact-header {
   grid-area: contact-header;
   color: black;
   font-size: 30px;
 }
 
+.emailContainer {
+  grid-area: email;
+  position: relative;
+}
+
+.errorMessage {
+  text-align: center;
+  color: #800000;
+  position: absolute;
+  margin-top: 15px;
+  margin-right: 10px;
+  right: 0;
+  top: 0;
+}
+
 .form {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
+  grid-template-columns: minmax(1fr, 2fr);
   grid-template-rows: auto;
   column-gap: 10px;
   grid-template-areas:

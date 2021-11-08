@@ -3,16 +3,14 @@ import './form.css'
 
 const Form = () => {
   const [emailClass, setEmailClass] = useState('email')
-  const onSubmit = () => {
-    const input = document.getElementById("email")
-    input.addEventListener(
-      "invalid",
-      event => {
-        setEmailClass('email error')
-      },
-      false
-    )
-    console.log(input)
+  const [showEmailError, setShowEmailError] = useState(false)
+  const [email, setEmail] = useState('')
+  const onSubmit = (e) => {
+    e.preventDefault()
+    if (!email) {
+      setEmailClass('email error')
+      setShowEmailError(true)
+    }
   }
 
   return (
@@ -21,9 +19,18 @@ const Form = () => {
       <input type="text" name="fname" className="fname" placeholder="First Name"/>
       <input type="text" name="lname" className="lname" placeholder="Last Name" />
       <input type="text" name="title" className="title" placeholder="Title" />
-      <input type="text" name="email" className={emailClass} id="email" placeholder="Email" required />
+      <span class="emailContainer">
+        <input type="text" name="email" className={emailClass} id="email" placeholder="Email" value={email} onChange={setEmail} />
+        {
+          showEmailError
+          ?
+          <div className="errorMessage">Required</div>
+          :
+          <></>
+        }
+      </span>
       <textarea type="text" name="message" className="message" rows="4" cols="50" placeholder="Message" />
-      <button className="button" onClick={onSubmit}>Submit</button>
+      <button className="button" onClick={(e) => onSubmit(e)}>Submit</button>
     </form>
   )
 }
