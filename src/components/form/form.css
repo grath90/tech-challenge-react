@@ -23,6 +23,10 @@
   justify-content: center;
 }
 
+.error {
+  border-color: #800000;
+}
+
 input, textarea {
   background-color: #F5F5F5;
   width: 100%;
@@ -68,4 +72,19 @@ textarea {
     "title email"
     "message message"
     "button ."
+}
+
+@media only screen and (max-width: 768px) {
+ .form {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "contact-header"
+    "fname"
+    "lname"
+    "title"
+    "email"
+    "message"
+    "button"
+ }
 }
